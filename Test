@@ -1,0 +1,158 @@
+
+print('I confirm that all the solutions I provide on this test will be the work of my own.The course instructor is the only person I will ask for help during the test.I confirm that I will only use internet access for searching for documentation, tutorials and examples, not asking for help with solving the particular problem.')
+
+
+print('Eat, drink, study, sleep, repeat,')
+for _ in range(98):
+    print('eat, drink, study, sleep, repeat,')
+print('eat, drink, study, sleep, repeat.')
+
+
+v=['caca','pipi','mama','tata']
+v = [ str( x ) for x in v ]
+v = [ input( x ) for x in v ]
+v = [ str( v ) for x in v ]
+v = [ print( x ) for x in v ]
+v = [ int( v ) for x in v ]
+print(v)
+
+a=5
+b=7
+
+a, b = (0, 0) if a == 0 or b == 0 else (a, b)
+print(a,b)
+c = a if a <= b else b
+c = try a/b except b == 0
+c = a if a <= b elif a == 0 b else 0
+a, b = (a, b) if a <= b else (b, a)
+print(a,b,c)
+
+
+
+
+with open(r'file1.txt', 'r', encoding='utf-8') as input_file:
+    with open('file2.txt', 'w',encoding='utf-8') as output_file:
+        for line in input_file:
+            try:
+                line = line.strip()
+                line=int(line)
+                output_file.write(line + '\n')
+                continue
+            except:
+                line=str(line)
+
+
+total=0
+n=input()
+n=int(n)
+for x in range(0,n):
+    x=int(input())
+    if x%2==0:
+        total=x+total
+    else:
+        pass
+print(total)
+
+
+words={}
+user_string= input()
+count = 0
+for x in user_string:
+    print(x.isupper())
+    if x.isupper():
+        count += 1
+print(count)
+
+
+words='CAPS LOCK is a nice key!'
+count = 0
+words=input()
+listos=list(words)
+for x in set(listos):
+    if x.isupper():
+        count += 1
+print(count)
+
+sentence=[]
+with open(r'file1.txt', 'r', encoding='utf-8') as input_file:
+    with open(r'file2.txt', 'w', encoding='utf-8') as output_file:
+        for x in input_file:
+            x=x.strip()
+            sentence.append(x)
+        sentence=sorted(sentence)
+        for line in sentence:
+            output_file.write(line + '\n')
+
+listos=[]
+words=[]
+capwordss=[]
+mergedlist=[]
+with open(r'file1.txt', 'r', encoding='utf-8') as input_file:
+    for q in input_file:
+        mergedlist=q.strip().split()
+        words=mergedlist+words
+    for word in words:
+        if word[0].isupper():
+            listos.append(word)
+    for capwords in listos:
+        capwordss.append(capwords)
+    for a in sorted(set(capwordss)):
+        print(a)
+
+
+
+
+def funky():
+    return {
+        'Alice': [ 100, 200, 300 ],
+        'Bob': [ 400, 500, 600 ]
+    }
+for x in funky().values():
+    pass
+print(x[1])
+print(funky().values() )
+
+
+
+
+
+
+s = input().strip()
+n_chars = len(set(s))
+print(f'The number of different characters is: {n_chars}')
+
+
+
+while True:
+    user_input=input('Plese enter a number,PLEASE')
+    try:
+        user_input=int(user_input)
+        print(user_input)
+        break
+    except ValueError:
+        print('You have entered a string')
+        continue
+
+
+def is_palindrome(word):
+    if word == word[::-1]:
+        return True
+    else:
+        return False
+
+count=0
+words=[]
+sentence='lol a test of palidromes we have toot'
+words=sentence.split()
+for word in words:
+    if word == word[::-1]:
+        count += 1
+    else:
+        pass
+print(count)
+
+
+for word in input().split(): count += 1 if word == word[::-1] else pass
+'Yes' if fruit == 'Apple' else 'No'
+
+[count+=1 if word == word[::-1] else pass, for word in input().split()]

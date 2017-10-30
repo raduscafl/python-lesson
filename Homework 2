@@ -1,0 +1,95 @@
+"Find the sum of a list of numbers inputed by user"
+
+numbers=input('Input a list of strings')
+user_list=numbers.split(',')
+for x in user_list:
+    n=int(x)+n
+
+print(n)
+
+
+'1.6 /ex 3'
+sports=[]
+with open(r'calories_burnt.txt', 'r',encoding='utf-8') as calories_file:
+    for x in calories_file:
+        sport,calorie= x.strip().split()
+        calories=int(calorie)
+
+        if calories>=500:
+            sports.append(sport)
+
+    cal=sorted(sports)
+    for y in cal:
+        print(y)
+
+
+'1.6/ ex4'
+n=0
+sports=[]
+with open(r'calories_burnt.txt', 'r',encoding='utf-8') as calories_file:
+    for x in calories_file:
+        sport,calorie= x.strip().split()
+        calorie=int(calorie)
+        sports.append(calorie)
+    for sums in sports:
+        n= sums+ n
+    print(n)
+
+
+n=0
+numbers=input('Plese enter numbers')
+number=numbers.split(' ')
+try:
+    num=int(number)
+except ValueError:
+    number=numbers.split(',')
+    num=int(number)
+for sums in str(number):
+    n=int(sums)+n
+print(n)
+
+
+n=0
+numbers=input('Plese enter numbers')
+import re
+number=re.split(r'[,; ]+', numbers)
+
+for sums in number:
+    n=int(sums)+n
+
+print(n)
+
+t=[5,4,3]
+print(r) for r**2 in [t]
+t=['one 2','two 3']
+p1 = [ s.split() for s in t ]
+print(p1)
+p2 = [ lst[-1] for lst in p1 ]
+print(p2)
+p = [ int(x) for x in p2 ]
+print(p)
+
+p2=[int(s.split()[-1])for s in t ]
+print(p2)
+
+
+t=[]
+for sn in range(1,6):
+    t = [ input(f'Please enter string #{sn}')
+    t.append(sn)
+
+while True:
+    fname = input('Please enter a filename')
+    try:
+        with open(fname, 'r') as file:
+            print(file.read())
+        except:
+            continue
+    break
+
+listos=[11,10,10,13,13,9,7,14,8,14,12,11,11]
+p=[]
+for i,number in enumerate(listos):
+    if i>1 and i<len(listos)-2:
+        p.append(number)
+print(p)

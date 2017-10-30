@@ -1,0 +1,94 @@
+'A list is created using []'
+my_list = [ f'Printout for person {x * 2}' for x in range(10) ]
+'{} keeps the value that should be use'
+print(my_list)
+for entry in my_list:
+    print(entry, end=',')
+'This loop will display all the value separated without brakets'
+
+my_set={12, 34,12311544656,43,12}
+print(my_set)
+'Objects in set can be only one time and the order is random'
+
+s= sorted(my_set)
+print(s)
+'Sort a set by size, becomes like a list'
+
+my_set ={x**2 for x in range(-5,10)}
+print(my_set)
+'Range is from the first number stated to the last number states -1'
+'** means square'
+
+participants=['Alex',
+'Bob',
+'Claudia',
+'Alex',
+'Alex',
+'Alex',
+'Bob'
+]
+s=sorted(set(participants))
+print(s)
+'Transforms a list into a sorted set to get rid of repetion'
+
+
+participants=['Alex',
+'Bob',
+'Claudia',
+'George'
+]
+
+for i in range(len(participants)):
+    if  i==len(participants)-1:
+        print(participants[i], end='.')
+    else:
+        print(participants[i], end=',')
+
+'When you have a list of strings you should use range(len(list))'
+
+for i,name in enumerate(participants):
+    if  i==len(participants)-1:
+        print(name, end='.')
+    else:
+        print(name, end=',')
+'Enumerate will make the list as number,no need of range and len.
+'However you need one more variable when creating the for loop'
+
+
+
+participants=['Alex',
+'Bob',
+'Claudia',
+'George']
+emails = {
+'Bob':'bob@gmail.com',
+'Bob':'bob@gmail.com',
+'Bob':'bob@gmail.com',
+'Claudia':'claudia@gmail.com',
+'George':'george@gmail.com',
+'Alex':'alex@gmail.com',
+}
+print(emails)
+'This is a dictionary'
+'Displays only one time, does not repeat'
+
+for name in emails:
+    print(name)
+'Displays only the first item of the pair'
+
+
+for email in emails.values():
+    print(email)
+'.values will display the other part of the pair '
+
+
+for name in emails.items():
+    print(name)
+    print(email)
+'.items() will display pairs,both of the items'
+
+
+if 'Alex' in emails:
+    print('we have sent some spam!')
+'Checks if this string is in the dictionary'
+'This also works with sets and lists'

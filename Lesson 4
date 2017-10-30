@@ -1,0 +1,134 @@
+'FUNCTIONS'
+
+emails = {
+'Bob':'bob@gmail.com',
+'Claudia':'claudia@gmail.com',
+'George':'george@gmail.com',
+'Alex':'alex@gmail.com'
+}
+
+def send_greeting(student_name):
+    print(f'Hello {student_name}!')
+'Use f in order to treat {} as a variable'
+send_greeting('Radu')
+
+
+'Functions are local'
+'Function is just created,but not run'
+'student_name will be change with the given value'
+def convert_in_string(student_name):
+    result=''
+    for name in student_name:
+        result=result + ' ' + name
+
+        return result
+
+my_list=['Alex','Bob','Catalina']
+'Function is called and we give it values'
+s=convert_in_string(my_list)
+
+
+def convert_in_string(student_name):
+    if len(student_names)==0:
+        return 'No student names provided'
+'If there is no value provided, returns a feedback'
+    result=''
+    for name in student_name:
+        result=result + ' ' + name
+
+    return result
+
+'This function compares two number'
+'When using return, you can skip using else'
+def my_maximum(number_1,number_2):
+    if number_1 > number_2:
+        return number_1
+    else:
+        return number_2
+
+n=my_maximum(7,88)
+print(f'Max value is {n}')
+
+
+
+'Programs to ask users'
+
+'Using input alone, python will consider the input value as a string'
+'int(), will convert value into integer'
+x=int(input())
+y=int(input())
+z=x+y
+print(z)
+
+'Ask user for list'
+'Use input alone and then use .split fanction to create a list'
+x=input()
+my_list=x.split(',')
+print(my_list)
+
+
+'Function that will greet each name that is stated by user'
+def print_greetings(name):
+    for name in my_list:
+        print(f'Hello {name}!')
+x=input()
+my_list=x.split(',')
+print_greetings(my_list)
+
+
+
+name=input('Plese enter your name')
+year=0
+'While will keep looping until the contitions are met'
+while (year<1920) or (year>2015):
+    user_input=input('Plese enter your year of birth')
+'Try will avoid crashing your program.'
+'As if the value enter is not correct, it will give you a message and put a defined value'
+    try:
+        year=int(user_input)
+    except ValueError:
+        print('Oops!Assuming the year is 2000')
+        year=2000
+
+age=2017-year
+print(f'Your age is {age}.',end='')
+
+
+if year<1985:
+    print('You might want to take a tour to our modern app')
+else:
+    print('You probably know how to use our app')
+
+'It will loop until you enter a correct value'
+'A break should be insert in order to avoid an infinit loop'
+while True:
+    try:
+        x=int(input('Write the first number'))
+        y=int(input('Write the second number'))
+        break
+    except ValueError:
+        print('You entered a string, it should be a value')
+
+m=max(x,y)
+print(f'The maximum value is {m}')
+
+
+my_emails = {
+'Bob':'bob@gmail.com',
+'Claudia':'claudia@gmail.com',
+'George':'claudia@gmail.com',
+'Alex':'alex@gmail.com'
+}
+my_emai = {
+'Bob':'bob@gmail.com',
+'Claudia':'claudia@gmail.com'
+}
+
+def check_duplicates(emails):
+    if len(set(emails.values()))==len(emails):
+        print('Everthing is fine')
+    else:
+        print('Contains duplicates')
+
+check_duplicates(my_emails)
+check_duplicates(my_emai)

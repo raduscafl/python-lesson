@@ -1,0 +1,87 @@
+salary=int(input('Please enter your expected salary after graduation '))
+num_languages=int(input('Please enter the number of programming languages you will learn '))
+print(f'Your awesomeness score is ' + ({salary} * {num_languages}))
+
+for i in range(5,10):
+    print("Hi there! Is there anyone behind the door?")
+
+i = 0
+while i < 10:
+    print("Hi there! Is there anyone behind the door?")
+    i = i + 1
+
+i = 0
+while i < 10:
+    print("Hi there! Is there anyone behind the door?")
+
+
+
+while True:
+    number = input('Enter a positive number please: ')
+    if int(number)>0:
+        break
+    else:
+        print('No way, you should enter a positive number!')
+
+while True:
+    n = input('Please enter a number:')
+    try:
+        n = int(n)
+    except ValueError:
+        print('You have entered something that cannot be converted into a number!')
+        continue
+    if n <= 0:
+        print('You have entered a number, but it is not positive.')
+    else:
+        break
+
+
+user_input = input('Please enter a number')
+print('Thank you! We’ve just withdrawn $' + user_input + ' from your credit card.')
+
+user_input = input('Please enter a number')
+user_input_converted = int(user_input)
+print('Thank you! We’ve just withdrawn $' + user_input_converted + ' from your credit card.')
+
+user_input = input('Please enter a number')
+print('Thank you! We’ve just withdrawn $' + int(user_input) + ' from your credit card.')
+
+user_input = input('Please enter a number')
+print(f'Thank you! We’ve just withdrawn ${user_input} from your credit card.')
+
+user_input = input('Please enter a number')
+user_input_converted = int(user_input)
+print(f'Thank you! We’ve just withdrawn ${user_input_converted} from your credit card.')
+
+x = list(range(1, 101))
+print(x[2 : 101 : 2])
+
+names = ['Alex', 'Bob', 'Claudia', 'Daniel', 'Eugene', 'Felix', 'George']
+for i, n in enumerate(names):
+    if (i % 2==0):
+        print(n)
+
+names = ['Alex', 'Bob', 'Claudia', 'Daniel', 'Eugene', 'Felix', 'George']
+filtered_names = [ name for name in names if len(name)>=4 ]
+
+for n in filtered_names:
+    print(n)
+
+
+print(list('Alexander and Alan'))
+print(list(set('Alexander and Alan'.lower())))
+print(list(set('Alexander and Alan'))
+
+numbers = [abs(x) for x in range(-3, 9)]
+print(len(set(numbers)))
+
+
+muse={
+'one':'red',
+'two':'blue',
+'three':'code',
+'four':'you'
+}
+
+x = [ 'Alex', 'Bob', 'Claudia' ]
+print( ', '.join(x) )

@@ -1,0 +1,81 @@
+
+x=[4, 'Hi!', 89, 2017]
+x[-1]
+x[0]
+
+x=['Leo','Radu','Catalina','Tessa']
+email={
+'Leo':'leo@leo.com',
+'Tessa':'tessa@example.com',
+'Catalina':'kolya@email.com'
+}
+'Catalina' in email
+email['Catalina']
+
+for name in x:
+    print(f'Hi,{name}!',end='')
+    if name in email:
+        print(f'I have sent you an email at {email[name]}')
+
+
+
+x=['Leo','Radu','Catalina','Tessa','Alex','Kolya','Kirill']
+x[0:-1]
+print(x[7:1:-1])
+y=(x[0:2]+x[3:5])
+for name in y:
+    print(name,end=' ')
+
+y=(x[0:2]+x[3:5])
+for i in [0,1,2,3]:
+    print(y[i], end=',')
+
+y=(x[0:2]+x[3:5])
+for i in range(4):
+    print(y[i], end=',')
+
+for i in range (len(x)):
+    if i==len(x)-1:
+        print(x[i], end='.')
+    else:
+        print(x[i],end=',')
+
+x=['Leo','Radu','Catalina','Tessa','Alex','Kolya','Kirill']
+y=x[0:6]
+print('Attendence:', y,'and',x[-1])
+
+for i in range(len(x)):
+    if i==0:
+        print('Attendence',end='')
+    if i==len(x) -1:
+        print('and ',end='')
+    if i== len(x)-1:
+        print(x[i],end='.')
+    elif i==len(x)-2:
+        print(x[i],end=' ')
+    else:
+        print(x[i], end=',')
+
+for i in range (len(x)):
+    if i % 2 ==0 and not (i==0)
+    print('eeem', end='')
+
+
+x=['Leo','Radu','Catalina','Tessa','Alex','Kolya','Kirill']
+print(max(x))
+print(min(x))
+
+x=[1985,1994,2000,1812]
+sum(x)
+Average=sum(x)/len(x)
+print(Average)
+differences=[1985 - number for number in x]
+print(differences)
+
+x=[1985,1994,2000,1812]
+Type=[('old' if year_of_birth <= 1985 else 'young') for year_of_birth in x]
+print(Type)
+
+x=['Leo','Radu','Catalina','Tessa','Alex','Kolya','Kirill']
+greetings=[(f'Oi,{name}!')  for name in x]
+print(greetings)

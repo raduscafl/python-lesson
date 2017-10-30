@@ -1,0 +1,29 @@
+words={}
+wordss=[]
+
+with open(r'bugs.txt','r',encoding='utf-8') as file_words:
+    for x in file_words:
+        x=x.strip()
+        import re
+        word=re.split(r'[,;*=. ]',x)
+
+        for y in word:
+            q=y.strip()
+            if len(q)==0:
+                pass
+            else:
+                wordss.append(q.lower())
+    for w in wordss:
+        if w not in words:
+            words[w] = 1
+        else:
+            words[w] += 1
+
+    maximum=max(words.values())
+    minimum=min(words.values())
+
+    for word,frequency in words.items():
+        if frequency==maximum:
+            print(f'The most common word is {word} and repeats {maximum} times')
+        if frequency==minimum:
+            print(f'The least common word is {word} and repeats {minimum} times')

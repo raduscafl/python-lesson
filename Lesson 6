@@ -1,0 +1,117 @@
+"FILES"
+"Opens a file created and reads what's on it"
+"Using x.strip, it removes any special characters"
+with open(r'students.csv', 'r', encoding='utf-8') as input_file:
+    for x in input_file:
+        x = x.strip()
+        print(x.split(';'))
+
+
+"Write in a file.This file was not created yet."
+"Using \n you write each new character in a new line"
+with open(r'students_processed.csv','w',encoding='utf-8') as output_file:
+    for i in range(0,10):
+        output_file.write(str(i)+'\n')
+
+
+'You can split each element in the string'
+s='Radu Florea; raduscafl'
+list_of_strings=s.split()
+print(list_of_strings)
+
+
+'We add only the first name from a particular file and stores it in a new file'
+list_of_names=[]
+with open(r'students.csv', 'r', encoding='utf-8') as input_file:
+    for x in input_file:
+        x = x.strip()
+        str_list=x.split()
+        names=str_list[0]
+        print(names)
+        list_of_names.append(names)
+
+with open(r'students_processed.csv','w',encoding='utf-8') as output_file:
+    for name in list_of_names:
+        output_file.write(f'{name}\n')
+
+
+'We ca open to read and write files in the same time'
+with open(r'students.csv', 'r', encoding='utf-8') as input_file:
+    with open(r'students_processed.csv','w',encoding='utf-8') as output_file:
+        for line in input_file:
+            stripped_line=line.strip()
+            str_list=stripped_line.split(';')
+            name=str_list[1]
+            output_file.write(f'{name}\n')
+
+
+with open(r'students.csv', 'r', encoding='utf-8') as input_file:
+    with open(r'students_processed.csv','w',encoding='utf-8') as output_file:
+        for line in input_file:
+            stripped_line=line.strip()
+            str_list=stripped_line.split(' ')
+            combined_list=str_list[0]
+            names=combined_list.split(' ')
+            name=names[0]
+            output_file.write(f'{name}\n')
+
+
+
+with open(r'students.csv', 'r', encoding='utf-8') as input_file:
+    with open(r'students_processed.csv','w',encoding='utf-8') as output_file:
+        for line in input_file:
+            stripped_line=line.strip()
+            list1=stripped_line.split(' ')
+            surname_and_username=list1[1]
+            surname=surname_and_username.split(';')[0]
+            output_file.write(surname + '\n')
+
+listos=[]
+name1=[]
+emails=[]
+with open(r'students.csv', 'r', encoding='utf-8') as input_file:
+    with open(r'emails.csv','r',encoding='utf-8') as output_file:
+        with open(r'greetings.csv','w',encoding='utf-8') as out_file:
+
+            for line in output_file:
+                stripped_line=line.strip(',')
+                str_list=stripped_line.split(',')
+                listos=str_list[0]
+
+            for c in input_file:
+                stripped1_line=c.strip()
+                str_list1=stripped1_line.split(' ')
+                combined1_list=str_list1[0]
+                names1=combined1_list.split(' ')
+                name1=names1[0]
+
+            for names in name1:
+                for name in listos:
+                    if name ==names :
+                        out_file.write( name + '\n')
+
+
+
+
+
+names = {  }
+
+with open(r'students.csv', 'r', encoding='utf-8') as students_file:
+    for line in students_file:
+        name_and_surname, github = line.strip().split(';')
+        names[github] = name_and_surname
+        print(name_and_surname)
+
+emails = { }
+
+with open(r'emails.csv', 'r', encoding='utf-8') as emails_file:
+    for line in emails_file:
+        github, email = line.strip().split(';')
+        emails[github] = email
+        print(email)
+
+with open(r'greeetings.txt','w',encoding='utf-8') as output_file:
+    for github_username, name_and_surname in names.items():
+        if github_username in emails:
+            email = emails[github_username]
+            output_file.write(f'Hi {name_and_surname}! We have send you an email at {email}\n')
